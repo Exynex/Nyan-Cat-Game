@@ -18,7 +18,6 @@ class Player extends Sprite {
   //Set the player sprite image 
   
   void setSpriteImage(String imageLocation) {
-          ninjaTrail.draw(mouseX, mouseY);
     playerImage = loadImage(imageLocation);
     //super.width = playerImage.width;
     //super.height = playerImage.height;
@@ -31,6 +30,7 @@ class Player extends Sprite {
     }
          
     image(playerImage, mouseX-25, mouseY-16);
+    Trail.draw(mouseX, mouseY); 
     
   }
 }

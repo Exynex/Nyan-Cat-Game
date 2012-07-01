@@ -70,24 +70,25 @@ int catfaty = 45;
 
 
 //trail int
-normalSpectrumTrail normalTrail;
-ninjaSpectrumTrail ninjaTrail;
-americanSpectrumTrail americanTrail;
-hipsterSpectrumTrail hipsterTrail;
-mexicanSpectrumTrail mexicanTrail;
-//normalSpectrumTrail normalTrail;
+SpectrumTrail Trail;
+//colors for trails
+color trailColorOne;
+color trailColorTwo;
+color trailColorThree;
+color trailColorFour;
+color trailColorFive;
+color trailColorSix;
+
 
 void setup() {
   size(980, 480);
   smooth();
   //trails
-  normalTrail = new normalSpectrumTrail();
-  ninjaTrail = new ninjaSpectrumTrail();
-  americanTrail = new americanSpectrumTrail();
-  hipsterTrail = new hipsterSpectrumTrail();
-  mexicanTrail = new mexicanSpectrumTrail();  
+  Trail = new SpectrumTrail();
+ 
   //color
   clr = color(0, 0, 255);
+  
   // font
   font = loadFont("font.vlw");
   //sounds
@@ -106,12 +107,14 @@ void setup() {
   }
   // create player
   player = new Player(mouseX-25, mouseY-16, 50, 32);
+ 
+  
 }
 
 
 
 //drawing loop begins here
-void draw() {
+public void draw() {
   //draws trail
    
 
@@ -158,15 +161,14 @@ void draw() {
     
     // nyan mode
     if ( G1.clicked ) {
+
       G1.clicked = false;
       selections = false;
       gameLoop = true;
       // set sprite images
-      normalTrail.draw(mouseX, mouseY);
       player.setSpriteImage("Nyan-cat.png");
       setEnemySpriteImage("nyanstar.png");
       nyancatmusic.trigger();
-      
     } 
     // ninja mode
     if ( G2.clicked ) {
@@ -174,7 +176,6 @@ void draw() {
       selections = false;
       gameLoop = true;
       // set sprite images
-      ninjaTrail.draw(mouseX, mouseY);
       player.setSpriteImage("tinynyaninja.png");
       setEnemySpriteImage("tinytinystar.png");
       nyancatmusic.trigger();
@@ -184,11 +185,11 @@ void draw() {
       G3.clicked = false;
       selections = false;
       gameLoop = true;
-      // set sprite images
-      americanTrail.draw(mouseX, mouseY);
+      // set sprite image
       player.setSpriteImage("americakittynotsm.png");
       setEnemySpriteImage("hamsickle.png");
       nyancatmusic.trigger();
+      
     } 
     // hipster mode
     if ( G4.clicked ) {
@@ -211,16 +212,8 @@ void draw() {
       player.setSpriteImage("mexican.png");
       setEnemySpriteImage("burrito.png");
       nyancatmusic.trigger();
-      mexicanTrail.draw(mouseX, mouseY); 
-      /* 
-      Read the code! The first issue I would like to fix is
-      the trails not showing. It worked but wanted to make
-      a diferent trail for each one of the cats and it stoped
-      working. Maybe because I added the 
-      xxxxxTrail.draw(mouseX, mouseY);
-      in a plase I should not.
-      */
     }
+    
   }
 
   //////////////
@@ -294,6 +287,7 @@ void draw() {
       minutes = 0;
     }
   }
+  
 }
 //update the projectile's speed
 void updateSpeed() {
@@ -361,5 +355,6 @@ void mouseClicked() {
     replay.mouseClicked();
     main.mouseClicked();
   }
+  
 }
 

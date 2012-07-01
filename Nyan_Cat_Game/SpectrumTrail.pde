@@ -1,4 +1,4 @@
-class ninjaSpectrumTrail {
+class SpectrumTrail {
 
   // position
   PVector p;
@@ -18,19 +18,32 @@ class ninjaSpectrumTrail {
   // colors
   color[] colors;
 
-  ninjaSpectrumTrail() {
+ SpectrumTrail() {
 
     // position vector
     p = new PVector();
 
     // init colors
+     //color for trails
+        trailColorOne = color(255, 18, 21); 
+        trailColorTwo= color(255, 168, 10);
+        trailColorThree = color(255, 255, 10);
+        trailColorFour = color(60, 255, 13);
+        trailColorFive = color(20, 171, 255);
+        trailColorSix = color(118, 68, 255);
+        
+        /* 
+          fail to change color. 
+          if (G5.clicked){ trailColorOne = color(0);}
+          G5.clicked function on the mauin void draw failed too
+        */
     colors = new color[6];
-    colors[0] = color(255, 18, 21); 
-    colors[1] = color(255, 168, 10);
-    colors[2] = color(255, 255, 10);
-    colors[3] = color(60, 255, 13);
-    colors[4] = color(20, 171, 255);
-    colors[5] = color(118, 68, 255);
+    colors[0] = color(trailColorOne); 
+    colors[1] = color(trailColorTwo);
+    colors[2] = color(trailColorThree);
+    colors[3] = color(trailColorFour);
+    colors[4] = color(trailColorFive);
+    colors[5] = color(trailColorSix);
 
     // init trails
     trails = new PVector[trailLength];
