@@ -26,17 +26,20 @@ class SpectrumTrail {
     // init colors
      //color for trails
         trailColorOne = color(255, 18, 21); 
+        //trailColorOne = color(normalColor);
         trailColorTwo= color(255, 168, 10);
         trailColorThree = color(255, 255, 10);
         trailColorFour = color(60, 255, 13);
         trailColorFive = color(20, 171, 255);
         trailColorSix = color(118, 68, 255);
-        
+         //if (G3.clicked){trailColorOne = color(americanColor);}
         /* 
           fail to change color. 
           if (G5.clicked){ trailColorOne = color(0);}
           G5.clicked function on the mauin void draw failed too
         */
+
+
     colors = new color[6];
     colors[0] = color(trailColorOne); 
     colors[1] = color(trailColorTwo);
