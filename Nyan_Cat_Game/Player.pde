@@ -29,7 +29,7 @@ class Player extends Sprite {
       drawBounds(pos, radius);
     }
          
-    image(playerImage, mouseX-25, mouseY-16);
+    image(playerImage, mouseX-25, mouseY-16, 60, 40);
     Trail.draw(mouseX, mouseY); 
     
   }

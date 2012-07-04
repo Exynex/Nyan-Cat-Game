@@ -36,9 +36,9 @@ Button G2 = new Button(lolb, 170, 170, 50, "Ninja", lolt, 210);   // american | 
 Button G3 = new Button(100, 240, 170, 50, "American", 110, 280);//  mexican | evil
 Button G4 = new Button(lolb, 240, 170, 50, "Hipster", lolt, 280); //  french  | chinese
 Button G5 = new Button(100, 310, 170, 50, "Mexican", 110, 350);  //  
-Button G6 = new Button(lolb, 310, 170, 50, "soon..", lolt, 350);  //   
-Button G7 = new Button(100, 380, 170, 50, "soon..", 110, 420);  // 
-Button G8 = new Button(lolb, 380, 170, 50, "soon..", lolt, 420); //   
+Button G6 = new Button(lolb, 310, 170, 50, "Russian", lolt, 350);  //   
+Button G7 = new Button(100, 380, 170, 50, "Chinese", 110, 420);  // 
+Button G8 = new Button(lolb, 380, 170, 50, "French", lolt, 420); //   
 // time variables
 int count = 0;
 int countControl = 0;
@@ -65,6 +65,8 @@ PImage nyamerican;
 PImage nyhipster;
 PImage nymexican;
 PImage nyrussian;
+PImage nychinese;
+PImage nyfrench;
 //int for the size of the cats in the chose menu
 int catfatx = 75;
 int catfaty = 45;
@@ -113,7 +115,9 @@ void setup() {
     nyamerican = loadImage("americakittynot.png");
     nyhipster = loadImage("hipster.png");
     nymexican = loadImage("mexican.png");
-    nyrussian = loadImage("russian.png")
+    nyrussian = loadImage("russian.png");
+    nychinese = loadImage("chinese.png");
+    nyfrench = loadImage("french.gif");
   }
   // create player
   player = new Player(mouseX-25, mouseY-16, 50, 32);
@@ -165,8 +169,8 @@ public void draw() {
     //these are the buttons!:    these are the pictures of the buttons:
     G1.draw(); G2.draw();        image(nynormal, 360, 170, catfatx, catfaty);          image(nyninja, 800, 170, catfatx, catfaty);
     G3.draw(); G4.draw();        image(nyamerican, 360, 240, catfatx, catfaty);        image(nyhipster, 800, 240, catfatx, catfaty);
-    G5.draw(); G6.draw();        image(nymexican, 360, 315, catfatx, catfaty);         image(nyrussian, 800, 280, catfatx, catfaty);
-    G7.draw(); G8.draw(); 
+    G5.draw(); G6.draw();        image(nymexican, 360, 315, catfatx, catfaty);         image(nyrussian, 800, 315, catfatx+5, catfaty+5);
+    G7.draw(); G8.draw();        image(nychinese, 360, 400, catfatx, catfaty);         image(nyfrench, 800, 400, catfatx, catfaty);
 
     
     // nyan mode
@@ -223,6 +227,7 @@ public void draw() {
       setEnemySpriteImage("burrito.png");
       nyancatmusic.trigger();
     }
+    //russian
     if (G6.clicked) {
      G6.clicked = false;
      selections = false;
@@ -231,6 +236,23 @@ public void draw() {
      setEnemySpriteImage("bomb.png");
      nyancatmusic.trigger();
     }
+    if(G7.clicked){
+     G7.clicked = false;
+     selections = false;
+     gameLoop = true;
+     player.setSpriteImage("chinese.png");
+     setEnemySpriteImage("bomb.png");
+     nyancatmusic.trigger(); 
+    }
+    if(G8.clicked){
+      G8.clicked = false;
+      selections = false;
+     gameLoop = true;
+     player.setSpriteImage("french.gif");
+     setEnemySpriteImage("bomb.png");
+     nyancatmusic.trigger(); 
+    }
+    
     
   }
 
@@ -368,6 +390,9 @@ void mouseClicked() {
     G3.mouseClicked();
     G4.mouseClicked();
     G5.mouseClicked();
+    G6.mouseClicked();
+    G7.mouseClicked();
+    G8.mouseClicked();
   }
   if ( gameOver ) {
     replay.mouseClicked();
