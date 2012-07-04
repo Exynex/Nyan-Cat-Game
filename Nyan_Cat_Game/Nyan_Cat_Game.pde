@@ -1,7 +1,18 @@
 /* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/62166*@* */
-/* !do not delete the line above, required for linking your tweak if you re-upload */
 /* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/55794*@* */
-/* !do not delete the line above, required for linking your tweak if you re-upload */
+/* --------------------------------------------------- ----------------+
++                                                                      +
++   ||//////| \\      // \\       // ||\      || ||//////| \\      //  +
++   ||         \\    //   \\     //  ||\\     || ||         \\    //   +
++   ||          \\  //     \\   //   || \\    || ||          \\  //    +
++   ||           \\//       \\ //    ||  \\   || ||           \\//     +
++   ||/////|     //\         ||      ||   \\  || ||/////|      \\      +
++   ||          // \\        ||      ||    \\ || ||           //\\     +
++   ||         //   \\       ||      ||     \\|| ||          //  \\    +
++   ||        //     \\      ||      ||      \|| ||         //    \\   +
++   ||//////|//       \\     ||      ||       \| ||//////| //      \\  +
++                                                                      +
++----------------------------------------------------------------------*/
 
 //imports
 import ddf.minim.*;
@@ -30,11 +41,11 @@ int lolt = 530;
 Button replay = new Button(200, 250, 220, 50, "Replay", 255, 290);
 Button main   = new Button(200, 325, 220, 50, "Main Menu", 210, 365);
 Button start  = new Button(200, 325, 220, 50, "Start Game", 210, 365);
-Button select  = new Button(10, 422, 960, 50, "Choose Kitty", 410, 460); // order of buttons
-Button G1 = new Button(100, 170, 170, 50, "Normal", 110, 210);  //   normal | ninja
-Button G2 = new Button(lolb, 170, 170, 50, "Ninja", lolt, 210);   // american | hipster
-Button G3 = new Button(100, 240, 170, 50, "American", 110, 280);//  mexican | evil
-Button G4 = new Button(lolb, 240, 170, 50, "Hipster", lolt, 280); //  french  | chinese
+Button select  = new Button(10, 422, 960, 50, "Choose Kitty", 410, 460); //        order of buttons
+Button G1 = new Button(100, 170, 170, 50, "Normal", 110, 210);  //                 normal | ninja
+Button G2 = new Button(lolb, 170, 170, 50, "Ninja", lolt, 210);   //             american | hipster
+Button G3 = new Button(100, 240, 170, 50, "American", 110, 280);//                mexican | evil
+Button G4 = new Button(lolb, 240, 170, 50, "Hipster", lolt, 280); //              french  | chinese
 Button G5 = new Button(100, 310, 170, 50, "Mexican", 110, 350);  //  
 Button G6 = new Button(lolb, 310, 170, 50, "Russian", lolt, 350);  //   
 Button G7 = new Button(100, 380, 170, 50, "Chinese", 110, 420);  // 
