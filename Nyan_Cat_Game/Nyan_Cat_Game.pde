@@ -1,3 +1,8 @@
+import ddf.minim.*;
+import ddf.minim.signals.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+
 /* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/62166*@* */
 /* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/55794*@* */
 /* --------------------------------------------------- ----------------+
@@ -15,8 +20,8 @@
 +----------------------------------------------------------------------*/
 
 //imports
-import ddf.minim.*;
-import gifAnimation.*;
+
+
 
 
 Player player; // player
